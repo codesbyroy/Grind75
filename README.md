@@ -14,9 +14,8 @@ Each problem is in its own folder under `problems/` with:
 3. Open `solution.py` for the Python code implementation.
 
 ## Progress
-## Progress
-- [ ] [Two Sum](https://leetcode.com/problems/two-sum)
-- [ ] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses)
+- [x] [Two Sum](https://leetcode.com/problems/two-sum)
+- [x] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses)
 - [ ] [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists)
 - [ ] [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
 - [ ] [Valid Palindrome](https://leetcode.com/problems/valid-palindrome)
