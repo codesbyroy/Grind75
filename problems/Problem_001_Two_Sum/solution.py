@@ -1,11 +1,11 @@
-"""
-:param nums: List[int] - List of integers
-:param target: int - Target sum
-:return: List[int] - Indices of the two numbers that add up to target
-"""
 from typing import List
 
 class Solution:
+    """
+    :param nums: List[int] - List of integers
+    :param target: int - Target sum
+    :return: List[int] - Indices of the two numbers that add up to target
+    """
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         # Dictionary to store numbers we've seen so far along with their indices.
         num_to_index = {}
