@@ -29,7 +29,7 @@ Here's the progress of solved problems so far:
 
 - ✅ [Two Sum](https://leetcode.com/problems/two-sum)
 - ✅ [Valid Parentheses](https://leetcode.com/problems/valid-parentheses)
-- ⬜ [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists)
+- ✅ [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists)
 - ⬜ [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
 - ⬜ [Valid Palindrome](https://leetcode.com/problems/valid-palindrome)
 - ⬜ [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree)
