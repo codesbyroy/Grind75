@@ -1,6 +1,6 @@
-# 🚀 Grind75 Solutions in Python 🐍
+# 🚀 Grind75 Solutions in Java ☕
 
-Welcome to the **Grind75** repository! This project focuses on solving **Data Structures & Algorithms** (DSA) problems from the Grind75 list, implemented in **Python**. 🧠💻
+Welcome to the **Grind75** repository! This project focuses on solving **Data Structures & Algorithms** (DSA) problems from the Grind75 list, implemented in **Java**. 🧠💻
 
 ---
 
@@ -8,7 +8,7 @@ Welcome to the **Grind75** repository! This project focuses on solving **Data St
 
 Each problem is organized in its own folder under the `problems/` directory, containing:
 - 📝 **README.md**: A brief description, approach, and complexity analysis of the problem.
-- 🧑‍💻 **solution.py**: The Python implementation of the solution.
+- 🧑‍💻 **Solution.java**: The Java implementation of the solution.
 
 ---
 
@@ -19,7 +19,7 @@ Each problem is organized in its own folder under the `problems/` directory, con
    - Problem statement 📖
    - Approach and thought process 🧩
    - Complexity analysis ⏱️
-3. Check out the `solution.py` file for the Python implementation. 🐍
+3. Check out the `Solution.java` file for the Java implementation. ☕
 
 ---
 
