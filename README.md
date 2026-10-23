@@ -17,10 +17,10 @@ When adding an entry, write the explanation in your own words. Capture the decis
 
 | # | Problem | Pattern | Status |
 |---|---|---|---|
-| 1 | [Two Sum](https://leetcode.com/problems/two-sum) | Hash map | Solved - [notes](problems/Problem_001_Two_Sum/README.md) |
-| 2 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses) | Stack | Solved - [notes](problems/Problem_002_Valid_Parentheses/README.md) |
-| 3 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists) | Linked list, two pointers | Solved - [notes](problems/Problem_003_Merge_Two_Sorted_Lists/README.md) |
-| 4 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock) | Array, running minimum | Solved - [notes](problems/Problem_004_Best_Time_to_Buy_and_Sell_Stock/README.md) |
+| 1 | [Two Sum](https://leetcode.com/problems/two-sum) | Hash map - complement lookup | Solved - [notes](problems/Problem_001_Two_Sum/README.md) |
+| 2 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses) | Stack - nested matching | Solved - [notes](problems/Problem_002_Valid_Parentheses/README.md) |
+| 3 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists) | Two pointers - sorted merge | Solved - [notes](problems/Problem_003_Merge_Two_Sorted_Lists/README.md) |
+| 4 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock) | One pass - running minimum | Solved - [notes](problems/Problem_004_Best_Time_to_Buy_and_Sell_Stock/README.md) |
 
 The remaining problems are not tracked here yet. Add them as they become part of the practice, rather than maintaining a long unchecked list.
 

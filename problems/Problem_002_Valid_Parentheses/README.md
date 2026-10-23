@@ -1,6 +1,10 @@
 # Valid Parentheses
 
-[LeetCode #20](https://leetcode.com/problems/valid-parentheses) · Easy · String, stack
+[LeetCode #20](https://leetcode.com/problems/valid-parentheses) - Easy
+
+**Pattern:** Stack - nested matching
+
+**Recognition cue:** Items must be matched in reverse order of arrival, as with nested delimiters. Keep the most recent unmatched opener available.
 
 ## Core idea
 

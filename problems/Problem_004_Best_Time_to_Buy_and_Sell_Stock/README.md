@@ -1,6 +1,10 @@
 # Best Time to Buy and Sell Stock
 
-[LeetCode #121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock) · Easy · Array, running minimum
+[LeetCode #121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock) - Easy
+
+**Pattern:** One pass - running minimum
+
+**Recognition cue:** You need the best difference between an earlier value and the current value. Track the smallest eligible earlier value while scanning.
 
 ## Core idea
 

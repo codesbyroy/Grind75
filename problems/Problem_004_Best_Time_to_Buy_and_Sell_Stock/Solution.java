@@ -1,7 +1,5 @@
 package Problem_004_Best_Time_to_Buy_and_Sell_Stock;
 
-import java.util.*;
-
 // LeetCode #121: Best Time to Buy and Sell Stock
 
 public class Solution {

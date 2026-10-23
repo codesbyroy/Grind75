@@ -1,6 +1,10 @@
 # Merge Two Sorted Lists
 
-[LeetCode #21](https://leetcode.com/problems/merge-two-sorted-lists) · Easy · Linked list, two pointers
+[LeetCode #21](https://leetcode.com/problems/merge-two-sorted-lists) - Easy
+
+**Pattern:** Two pointers - sorted merge
+
+**Recognition cue:** Both inputs are sorted, so comparing their current elements is enough to choose the next output element without sorting again.
 
 ## Core idea
 

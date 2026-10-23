@@ -1,6 +1,10 @@
 # Two Sum
 
-[LeetCode #1](https://leetcode.com/problems/two-sum) · Easy · Array, hash map
+[LeetCode #1](https://leetcode.com/problems/two-sum) - Easy
+
+**Pattern:** Hash map - complement lookup
+
+**Recognition cue:** The input is unsorted, and you need to find a pair matching a target efficiently. For each item, ask whether its complement has already appeared.
 
 ## Core idea
 
