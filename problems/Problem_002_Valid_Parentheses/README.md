@@ -1,31 +1,20 @@
-# Valid Parentheses (https://leetcode.com/problems/valid-parentheses)
+# Valid Parentheses
 
-Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.
+[LeetCode #20](https://leetcode.com/problems/valid-parentheses) · Easy · String, stack
 
-An input string is valid if:
+## Core idea
 
-1. Open brackets must be closed by the same type of brackets.
-2. Open brackets must be closed in the correct order.
-3. Every close bracket has a corresponding open bracket of the same type.
+Keep unmatched opening brackets on a stack. Each closing bracket must match the most recent opening bracket; reject it if the stack is empty or the types differ. A valid input leaves the stack empty at the end.
 
-## Example 1:
-```
-Input: s = "()"
-Output: true
-```
+## Complexity
 
-## Example 2:
-```
-Input: s = "()[]{}"
-Output: true
-```
+- Time: `O(n)`
+- Space: `O(n)` in the worst case
 
-## Example 3:
-```
-Input: s = "(]"
-Output: false
-```
+## Review note
 
-## Constraints:
-- `1 <= s.length <= 104`
-- `s` consists of parentheses only `'()[]{}'`
+The stack captures nesting order (last opened, first closed). A closing bracket cannot be matched by searching deeper in the stack; that would incorrectly accept interleaved pairs such as `([)]`.
+
+## Revisit
+
+- [ ] Can derive the empty-stack and final-stack checks without notes.

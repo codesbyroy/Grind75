@@ -10,59 +10,24 @@ class ListNode {
 }
 
 public class Solution {
-    /**
-     * PROBLEM: Merge two sorted linked lists into one sorted list
-     *
-     * KEY INSIGHTS:
-     * - Both input lists are already sorted in ascending order
-     * - Need to maintain sorted order in result
-     * - Handle edge cases: empty lists, different lengths
-     *
-     * ALGORITHM:
-     * 1. Use dummy head to simplify list construction
-     * 2. Compare current nodes from both lists
-     * 3. Add smaller value to result, advance that pointer
-     * 4. Append remaining nodes when one list is exhausted
-     *
-     * :param list1: ListNode - Head of the first sorted linked list
-     * :param list2: ListNode - Head of the second sorted linked list
-     * :return: ListNode - Head of the merged sorted linked list
-     */
+    /** Merges two sorted lists by relinking their existing nodes. */
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        // APPROACH: Two-pointer technique with dummy head
-        // TIME: O(m + n), SPACE: O(1) - only creating new nodes for comparison
-
-        // Create dummy head to simplify edge cases (avoids checking if result is empty)
         ListNode head = new ListNode();
-        ListNode pointer = head;  // Current position in the result list
+        ListNode pointer = head;
 
-        // Compare nodes from both lists while both have remaining elements
         while (list1 != null && list2 != null) {
-            ListNode newNode = new ListNode();  // Create new node for result
-
-            // Choose smaller value (maintain sorted order)
             if (list1.val <= list2.val) {
-                newNode.val = list1.val;
-                list1 = list1.next;  // Move to next node in list1
+                pointer.next = list1;
+                list1 = list1.next;
             } else {
-                newNode.val = list2.val;
-                list2 = list2.next;  // Move to next node in list2
+                pointer.next = list2;
+                list2 = list2.next;
             }
-
-            // Link new node to result and advance pointer
-            pointer.next = newNode;
             pointer = pointer.next;
         }
 
-        // Append remaining nodes (one list is exhausted, other may have elements)
-        // No need to create new nodes - just link remaining portion
-        if (list1 != null) {
-            pointer.next = list1;  // Attach rest of list1
-        } else if (list2 != null) {
-            pointer.next = list2;  // Attach rest of list2
-        }
+        pointer.next = list1 != null ? list1 : list2;
 
-        // Return actual head (skip dummy node)
         return head.next;
     }
 

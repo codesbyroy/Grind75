@@ -2,59 +2,19 @@ package Problem_001_Two_Sum;
 
 import java.util.*;
 
-// LEETCODE #1 - Two Sum
-// Difficulty: Easy
-// Tags: Array, Hash Table
+// LeetCode #1: Two Sum
 
 public class Solution {
-    /**
-     * PROBLEM: Find two numbers in array that add up to target, return their indices
-     *
-     * KEY INSIGHTS:/
-     * - Need to find pair (a, b) where a + b = target
-     * - Return indices, not values
-     * - Exactly one solution exists (guaranteed)
-     * - Can't use same element twice
-     *
-     * APPROACHES:
-     * 1. Brute Force: O(n²) - check all pairs
-     * 2. Hash Map: O(n) - store complements as we go
-     *
-     * ALGORITHM (Hash Map):
-     * 1. For each number, calculate its complement (target - number)
-     * 2. Check if complement exists in our seen numbers
-     * 3. If yes, return indices; if no, store current number
-     *
-     * :param nums: int[] - List of integers
-     * :param target: int - Target sum
-     * :return: int[] - Indices of the two numbers that add up to target
-     */
+    /** Returns the indices of the two values whose sum is {@code target}. */
     public int[] twoSum(int[] nums, int target) {
-        // APPROACH: Hash Map (One-pass)
-        // TIME: O(n), SPACE: O(n)
-
-        // Hash map to store {value: index} of numbers we've seen
-        // Key insight: store what we've seen, not what we're looking for
         Map<Integer, Integer> numToIndex = new HashMap<>();
-
-        // Single pass through array
         for (int index = 0; index < nums.length; index++) {
-            // For current number, what do we need to reach target?
             int complement = target - nums[index];
-
-            // Have we seen this complement before?
             if (numToIndex.containsKey(complement)) {
-                // Found the pair! Return indices (complement_index, current_index)
-                // complement_index < current_index (always return in order)
                 return new int[]{numToIndex.get(complement), index};
             }
-
-            // Haven't found pair yet, store current number for future lookups
-            // This prevents using same element twice
             numToIndex.put(nums[index], index);
         }
-
-        // Problem guarantees exactly one solution, so this shouldn't execute
         return new int[0];
     }
 

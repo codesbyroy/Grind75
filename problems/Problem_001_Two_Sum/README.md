@@ -1,23 +1,20 @@
-# Two Sum (https://leetcode.com/problems/two-sum)
+# Two Sum
 
-## Problem Statement
+[LeetCode #1](https://leetcode.com/problems/two-sum) · Easy · Array, hash map
 
-Given an array of integers `nums` and an integer `target`, find two numbers in the array that add up to the `target` and return their indices.
-x
-### Requirements:
-- You may assume that each input would have exactly one solution
-- You cannot use the same element twice
-- Return the answer in any order
+## Core idea
 
-### Example:
-```
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Explanation: Because nums[0] + nums[1] = 2 + 7 = 9
-```
+Scan once while storing each value's index. For the current value, look up `target - value` before storing the current value. Looking first prevents using the same array element twice and still handles duplicate values.
 
-### Constraints:
-- 2 <= nums.length <= 104
-- -109 <= nums[i] <= 109
-- -109 <= target <= 109
-- Only one valid answer exists
+## Complexity
+
+- Time: `O(n)` average
+- Space: `O(n)`
+
+## Review note
+
+Remember to return indices, not values. The guaranteed-solution constraint makes a fallback unnecessary in the interview version; this implementation returns an empty array if the constraint is violated.
+
+## Revisit
+
+- [ ] Can explain why the lookup happens before insertion and derive the complexity without notes.

@@ -2,60 +2,20 @@ package Problem_004_Best_Time_to_Buy_and_Sell_Stock;
 
 import java.util.*;
 
-// LEETCODE #121 - Best Time to Buy and Sell Stock
-// Difficulty: Easy
-// Tags: Array, Dynamic Programming
+// LeetCode #121: Best Time to Buy and Sell Stock
 
 public class Solution {
-    /**
-     * PROBLEM: Find maximum profit from buying and selling stock once
-     *
-     * KEY INSIGHTS:
-     * - Can only buy once and sell once
-     * - Must buy before selling (buy_day < sell_day)
-     * - Want to buy at lowest price and sell at highest price after that
-     * - Need to track minimum price seen so far
-     *
-     * APPROACHES:
-     * 1. Brute Force: O(n²) - check all buy/sell pairs
-     * 2. One Pass: O(n) - track min price and max profit
-     *
-     * ALGORITHM (One Pass):
-     * 1. Track minimum price seen so far
-     * 2. For each price, calculate profit if we sell today
-     * 3. Update maximum profit if current profit is better
-     *
-     * KEY INSIGHT: At each day, we either:
-     * - Found a new minimum price (potential buy day)
-     * - Found a better selling opportunity
-     *
-     * :param prices: int[] - Array of stock prices where prices[i] is the price on day i
-     * :return: int - Maximum profit that can be achieved
-     */
+    /** Returns the maximum profit from one buy followed by one sell. */
     public int maxProfit(int[] prices) {
-        // APPROACH: Single pass with tracking
-        // TIME: O(n), SPACE: O(1)
-
-        // Track the lowest price we've seen so far (best buy opportunity)
         int minPrice = Integer.MAX_VALUE;
-
-        // Track the maximum profit we can achieve
         int maxProfit = 0;
-
-        // Process each day's price
         for (int price : prices) {
-            // Case 1: Found a new minimum price (better buy opportunity)
             if (price < minPrice) {
                 minPrice = price;
-
-            // Case 2: Current price could be a good sell opportunity
-            // Calculate profit if we sell today (current price - min buy price)
             } else if (price - minPrice > maxProfit) {
                 maxProfit = price - minPrice;
             }
         }
-
-        // Return maximum profit (0 if no profitable transaction possible)
         return maxProfit;
     }
 

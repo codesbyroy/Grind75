@@ -1,32 +1,20 @@
-# Merge Two Sorted Lists (https://leetcode.com/problems/merge-two-sorted-lists)
+# Merge Two Sorted Lists
 
-## Problem Statement
+[LeetCode #21](https://leetcode.com/problems/merge-two-sorted-lists) · Easy · Linked list, two pointers
 
-You are given the heads of two sorted linked lists `list1` and `list2`.
+## Core idea
 
-Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
+Use a dummy head and a tail pointer. Repeatedly link the smaller current node to the tail, advance that input, then attach the unconsumed remainder when either list ends. The implementation relinks the existing input nodes; the unconsumed suffix is already sorted, so it can be attached directly.
 
-Return the head of the merged linked list.
+## Complexity
 
-### Example 1:
-```
-Input: list1 = [1,2,4], list2 = [1,3,4]
-Output: [1,1,2,3,4,4]
-```
+- Time: `O(m + n)`
+- Extra space: `O(1)` when relinking existing nodes
 
-### Example 2:
-```
-Input: list1 = [], list2 = []
-Output: []
-```
+## Review note
 
-### Example 3:
-```
-Input: list1 = [], list2 = [0]
-Output: [0]
-```
+This mutates the input lists by relinking their nodes. Be ready to explain this ownership choice; copying values into newly allocated nodes is another valid approach with different space usage.
 
-### Constraints:
-- The number of nodes in both lists is in the range [0, 50].
-- -100 <= Node.val <= 100
-- Both list1 and list2 are sorted in non-decreasing order.
+## Revisit
+
+- [ ] Explain why the remaining suffix is already sorted and why relinking uses constant extra space.
