@@ -8,7 +8,7 @@
 
 ## Core idea
 
-Scan once while storing each value's index. For the current value, look up `target - value` before storing the current value. Looking first prevents using the same array element twice and still handles duplicate values.
+Scan left to right, keeping a map from each previously seen value to its index. At each index, compute `target - nums[index]` and check whether that complement is already in the map. If it is, return the stored index and the current index; otherwise, store the current value and its index. Because the current value is added only after the lookup, it cannot pair with itself, while a later duplicate can still match it.
 
 ## Complexity
 
